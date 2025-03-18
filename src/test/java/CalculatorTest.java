@@ -40,5 +40,4 @@ public class CalculatorTest {
         assertEquals("Negative Results Are not allowed", ex.getMessage());
     }
 
-
 }
