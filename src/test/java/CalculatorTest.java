@@ -39,4 +39,17 @@ public class CalculatorTest {
         Exception ex = assertThrows(IllegalStateException.class, () -> {myCalc.subtract(4,6);});
         assertEquals("Negative Results Are not allowed", ex.getMessage());
     }
+
+    @Test
+    void testMultiplySuccess()
+    {
+        assertEquals(20, myCalc.multiply(4, 5));
+    }
+
+    @Test
+    void testMultiplyFail()
+    {
+        Exception ex = assertThrows(UnsupportedOperationException.class, () -> {myCalc.multiply(Integer.MAX_VALUE, 2);});
+        assertEquals("Multiplication overflow", ex.getMessage());
+    }
 }

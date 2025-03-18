@@ -13,9 +13,16 @@ public class Calculator {
 
     public int subtract(int firstNum, int secondNum) {
         long result = (long) firstNum - secondNum;
-        if (result < 0)
-        {
+        if (result < 0) {
             throw new IllegalStateException("Negative Results Are not allowed");
+        }
+        return (int) result;
+    }
+
+    public int multiply(int firstNum, int secondNum) {
+        long result = (long) firstNum * secondNum;
+        if (result > Integer.MAX_VALUE) {
+            throw new UnsupportedOperationException("Multiplication overflow");
         }
         return (int) result;
     }
