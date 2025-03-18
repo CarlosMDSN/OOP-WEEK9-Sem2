@@ -39,5 +39,4 @@ public class CalculatorTest {
         Exception ex = assertThrows(IllegalStateException.class, () -> {myCalc.subtract(4,6);});
         assertEquals("Negative Results Are not allowed", ex.getMessage());
     }
-
 }
