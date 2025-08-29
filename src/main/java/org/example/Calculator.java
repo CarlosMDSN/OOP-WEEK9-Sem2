@@ -26,4 +26,18 @@ public class Calculator {
         }
         return (int) result;
     }
+
+    public int divide(int firstNum, int secondNum)
+    {
+        if(secondNum == 0)
+        {
+            throw new ArithmeticException("Cannot divide by zero");
+        }
+        long result = (long) firstNum / secondNum;
+        if(result > Integer.MAX_VALUE)
+        {
+            throw new IllegalArgumentException("Result is too large");
+        }
+        return (int) result;
+    }
 }
