@@ -24,7 +24,7 @@ public class CalculatorTest {
     void testAddFail()
     {
         Exception ex = assertThrows(IllegalArgumentException.class, ()-> {myCalc.add(Integer.MAX_VALUE, 4);});
-        assertEquals("This value is too big", ex.getMessage());
+        assertEquals("This value is too biG", ex.getMessage());
     }
 
     @Test

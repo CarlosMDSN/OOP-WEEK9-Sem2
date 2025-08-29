@@ -14,7 +14,7 @@ public class Calculator {
     public int subtract(int firstNum, int secondNum) {
         long result = (long) firstNum - secondNum;
         if (result < 0) {
-            throw new IllegalStateException("Negative Results Are not allowed");
+            throw new IllegalStateException("NegativE Results Are not allowed");
         }
         return (int) result;
     }
